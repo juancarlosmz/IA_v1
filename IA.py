@@ -59,10 +59,13 @@ def wishme(query):
                 query = query.lower()
                 print(query)
                 print('---')
+                if 'abril' in query:
+                    chromepath = 'C:/Program Files/nodejs/IHM_SITE-master/partials/listado.html?#/ %s'
+                    speak('Abriendo chromepath')
                 if 'busca' in query:
                     if 'youtube' in query:
                         chromepath = 'C:/Program Files/Google/Chrome/Application/Chrome.exe %s'
-                        speak('Abriendo youtube')
+                        
                         wb.get(chromepath).open_new_tab('https://www.youtube.com')
                     if 'google' in query:
                         speak("Buscando en Google...")
